@@ -1,0 +1,6 @@
+@PedidosDDD_HostAddress = http://localhost:5056
+
+GET {{PedidosDDD_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
