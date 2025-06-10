@@ -22,7 +22,7 @@ public class PedidoRepository : IPedidoRepository
         return Task.CompletedTask;
     }
 
-    public Task<Pedido?> ObterPorIdAsync(Guid id)
+    public Task<Pedido?> ObterPorIdAsync(long id)
     {
         return Task.FromResult(_pedidos.FirstOrDefault(p => p.Id == id));
     }
@@ -32,7 +32,7 @@ public class PedidoRepository : IPedidoRepository
         return Task.FromResult(_pedidos.AsEnumerable());
     }
 
-    public Task RemoverAsync(Guid id)
+    public Task RemoverAsync(long id)
     {
         var pedido = _pedidos.FirstOrDefault(p => p.Id == id);
         if (pedido is not null)

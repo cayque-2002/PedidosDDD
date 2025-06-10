@@ -22,7 +22,7 @@ public class ProdutoRepository : IProdutoRepository
         return Task.CompletedTask;
     }
 
-    public Task<Produto?> ObterPorIdAsync(Guid id)
+    public Task<Produto?> ObterPorIdAsync(long id)
     {
         return Task.FromResult(_produtos.FirstOrDefault(p => p.Id == id));
     }
@@ -32,7 +32,7 @@ public class ProdutoRepository : IProdutoRepository
         return Task.FromResult(_produtos.AsEnumerable());
     }
 
-    public Task RemoverAsync(Guid id)
+    public Task RemoverAsync(long id)
     {
         var produto = _produtos.FirstOrDefault(p => p.Id == id);
         if (produto is not null)

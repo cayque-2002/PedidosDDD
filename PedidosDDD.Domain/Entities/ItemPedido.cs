@@ -8,13 +8,13 @@ namespace PedidosDDD.Domain.Entities;
 
 public class ItemPedido
 {
-    public Guid ProdutoId { get; private set; }
+    public long ProdutoId { get; private set; }
     public int Quantidade { get; private set; }
     public decimal ValorUnitario { get; private set; }
 
     public decimal ValorTotal => Quantidade * ValorUnitario;
 
-    public ItemPedido(Guid produtoId, int quantidade, decimal valorUnitario)
+    public ItemPedido(long produtoId, int quantidade, decimal valorUnitario)
     {
         if (quantidade <= 0) throw new ArgumentException("Quantidade deve ser maior que zero");
         if (valorUnitario <= 0) throw new ArgumentException("Valor unitário inválido");

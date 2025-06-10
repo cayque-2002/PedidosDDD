@@ -25,7 +25,7 @@ public class ProdutoService : IProdutoService
         });
     }
 
-    public async Task<ProdutoDto?> ObterPorIdAsync(Guid id)
+    public async Task<ProdutoDto?> ObterPorIdAsync(long id)
     {
         var produto = await _repo.ObterPorIdAsync(id);
         return produto is null ? null : new ProdutoDto
@@ -48,10 +48,10 @@ public class ProdutoService : IProdutoService
         if (produto is null) throw new Exception("Produto não encontrado");
 
         produto.AlterarPreco(dto.Preco); // Simples para o exemplo
-        await _repo.AtualizarAsync(product);
+        await _repo.AtualizarAsync(produto);
     }
 
-    public async Task RemoverAsync(Guid id)
+    public async Task RemoverAsync(long id)
     {
         await _repo.RemoverAsync(id);
     }

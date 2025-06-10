@@ -8,7 +8,7 @@ namespace PedidosDDD.Application.DTOs;
 
 public class ProdutoDto
 {
-    public Guid Id { get; set; }
+    public long Id { get; set; }
     public string Nome { get; set; } = string.Empty;
     public decimal Preco { get; set; }
 }

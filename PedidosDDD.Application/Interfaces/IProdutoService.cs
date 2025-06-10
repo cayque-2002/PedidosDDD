@@ -11,9 +11,9 @@ namespace PedidosDDD.Application.Interfaces;
 public interface IProdutoService
 {
     Task<IEnumerable<ProdutoDto>> ObterTodosAsync();
-    Task<ProdutoDto?> ObterPorIdAsync(Guid id);
+    Task<ProdutoDto?> ObterPorIdAsync(long id);
     Task AdicionarAsync(ProdutoDto dto);
     Task AtualizarAsync(ProdutoDto dto);
-    Task RemoverAsync(Guid id);
+    Task RemoverAsync(long id);
 }
 

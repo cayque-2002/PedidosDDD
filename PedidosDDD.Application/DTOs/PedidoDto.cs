@@ -8,7 +8,7 @@ namespace PedidosDDD.Application.DTOs;
 
 public class PedidoDto
 {
-    public Guid Id { get; set; }
+    public long Id { get; set; }
     public DateTime DataCriacao { get; set; }
     public List<ItemPedidoDto> Itens { get; set; } = new();
     public string Status { get; set; } = string.Empty;
@@ -16,7 +16,7 @@ public class PedidoDto
 
 public class ItemPedidoDto
 {
-    public Guid ProdutoId { get; set; }
+    public long ProdutoId { get; set; }
     public int Quantidade { get; set; }
     public decimal ValorUnitario { get; set; }
 }

@@ -9,7 +9,7 @@ namespace PedidosDDD.Domain.Entities;
 
 public class Pedido
 {
-    public Guid Id { get; private set; } = Guid.NewGuid();
+    public long Id { get; private set; }
     public DateTime DataCriacao { get; private set; } = DateTime.UtcNow;
     public List<ItemPedido> Itens { get; private set; } = new();
     public StatusPedido Status { get; private set; } = StatusPedido.AguardandoPagamento;

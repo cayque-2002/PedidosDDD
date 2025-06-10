@@ -31,7 +31,7 @@ public class PedidoService : IPedidoService
         });
     }
 
-    public async Task<PedidoDto?> ObterPorIdAsync(Guid id)
+    public async Task<PedidoDto?> ObterPorIdAsync(long id)
     {
         var pedido = await _repo.ObterPorIdAsync(id);
         if (pedido is null) return null;
@@ -50,7 +50,7 @@ public class PedidoService : IPedidoService
         };
     }
 
-    public async Task<Guid> CriarAsync(List<ItemPedidoDto> itensDto)
+    public async Task<long> CriarAsync(List<ItemPedidoDto> itensDto)
     {
         var pedido = new Pedido();
 
@@ -64,7 +64,7 @@ public class PedidoService : IPedidoService
         return pedido.Id;
     }
 
-    public async Task FinalizarAsync(Guid id)
+    public async Task FinalizarAsync(long id)
     {
         var pedido = await _repo.ObterPorIdAsync(id);
         if (pedido is null) throw new Exception("Pedido não encontrado");
@@ -73,7 +73,7 @@ public class PedidoService : IPedidoService
         await _repo.AtualizarAsync(pedido);
     }
 
-    public async Task CancelarAsync(Guid id)
+    public async Task CancelarAsync(long id)
     {
         var pedido = await _repo.ObterPorIdAsync(id);
         if (pedido is null) throw new Exception("Pedido não encontrado");

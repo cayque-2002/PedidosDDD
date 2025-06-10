@@ -10,10 +10,10 @@ namespace PedidosDDD.Domain.Interfaces;
 
 public interface IPedidoRepository
 {
-    Task<Pedido?> ObterPorIdAsync(Guid id);
+    Task<Pedido?> ObterPorIdAsync(long id);
     Task<IEnumerable<Pedido>> ObterTodosAsync();
     Task AdicionarAsync(Pedido pedido);
     Task AtualizarAsync(Pedido pedido);
-    Task RemoverAsync(Guid id);
+    Task RemoverAsync(long id);
 }
 
