@@ -12,4 +12,3 @@ public enum StatusPedido
     Finalizado = 1,
     Cancelado = 2
 }
-
