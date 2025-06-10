@@ -8,12 +8,11 @@ using PedidosDDD.Domain.Entities;
 
 namespace PedidosDDD.Domain.Interfaces;
 
-public interface IPedidoRepository
+public interface IProdutoRepository
 {
-    Task<Pedido?> ObterPorIdAsync(Guid id);
-    Task<IEnumerable<Pedido>> ObterTodosAsync();
-    Task AdicionarAsync(Pedido pedido);
-    Task AtualizarAsync(Pedido pedido);
+    Task<Produto?> ObterPorIdAsync(Guid id);
+    Task<IEnumerable<Produto>> ObterTodosAsync();
+    Task AdicionarAsync(Produto produto);
+    Task AtualizarAsync(Produto produto);
     Task RemoverAsync(Guid id);
 }
-
