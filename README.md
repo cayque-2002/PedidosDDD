@@ -94,18 +94,6 @@ Validação em memória para testes rápidos
 
 ---
 
-💡 Melhorias Futuras
-
-✅ Adicionar EF Core + PostgreSQL
-
-✅ Autenticação com JWT
-
-✅ Testes automatizados com xUnit
-
-✅ Logs e Exception Middleware
-
-✅ Publicação em Docker
-
 🧑‍💻 Autor
 Cayque Guilherme
 Desenvolvedor Back-end apaixonado por boas práticas, domínio do código e evolução contínua.
